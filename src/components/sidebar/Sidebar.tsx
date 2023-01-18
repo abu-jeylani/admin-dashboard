@@ -18,7 +18,6 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        {" "}
         <span className="logo">Admin</span>
       </div>
       <hr />
