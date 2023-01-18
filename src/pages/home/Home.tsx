@@ -1,10 +1,11 @@
-import React from "react";
 import "./home.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Widget from "../../components/widget/Widget";
 import FeaturedChart from "../../components/featuredchart/FeaturedChart";
 import Chart from "../../components/chart/Chart";
+import TableList from "../../components/table/TableList";
+import { orders } from "../../dummyData/orders";
 
 const Home = () => {
   return (
@@ -21,6 +22,10 @@ const Home = () => {
         <div className="charts">
           <FeaturedChart />
           <Chart />
+        </div>
+        <div className="listContainer">
+          <div className="listTitle">Latest Transactions</div>
+          <TableList rows={orders} />
         </div>
       </div>
     </div>
