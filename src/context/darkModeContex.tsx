@@ -1,12 +1,5 @@
-import React, {
-  createContext,
-  Dispatch,
-  FC,
-  ReactComponentElement,
-  useReducer,
-} from "react";
+import React, { createContext, useReducer } from "react";
 import DarkModeReducer from "./darkModeReducer";
-import { IAction } from "./darkModeReducer";
 
 export type DarkModeStateType = {
   darkMode: boolean;
