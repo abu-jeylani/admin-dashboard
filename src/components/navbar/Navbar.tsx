@@ -3,12 +3,12 @@ import {
   SearchOutlined,
   LanguageOutlined,
   DarkModeOutlined,
-  FullscreenExitOutlined,
-  NotificationsNoneOutlined,
-  ChatBubbleOutline,
-  ListOutlined,
 } from "@mui/icons-material";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContex";
+import { Link } from "react-router-dom";
 const Navbar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -21,29 +21,17 @@ const Navbar = () => {
             <LanguageOutlined className="icon" />
             English
           </div>
-          <div className="item">
+          <div className="item" onClick={() => dispatch({ type: "TOGGLE" })}>
             <DarkModeOutlined className="icon" />
           </div>
           <div className="item">
-            <FullscreenExitOutlined className="icon" />
-          </div>
-          <div className="item">
-            <NotificationsNoneOutlined className="icon" />
-            <div className="counter">1</div>
-          </div>
-          <div className="item">
-            <ChatBubbleOutline className="icon" />
-            <div className="counter">1</div>
-          </div>
-          <div className="item">
-            <ListOutlined className="icon" />
-          </div>
-          <div className="item">
-            <img
-              src="https://avatars.githubusercontent.com/u/48966850?v=4"
-              alt=""
-              className="avatar"
-            />
+            <Link to={"/users/abu"}>
+              <img
+                src="https://avatars.githubusercontent.com/u/48966850?v=4"
+                alt=""
+                className="avatar"
+              />
+            </Link>
           </div>
         </div>
       </div>

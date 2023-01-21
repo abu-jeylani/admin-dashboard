@@ -45,7 +45,7 @@ export const userRows: User[] = [
   {
     id: 1,
     username: "Abu",
-    img: "https://images.pexels.com/photos/1820770/pexels-photo-1820770.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500",
+    img: "https://avatars.githubusercontent.com/u/48966850?v=4",
     status: "active",
     email: "abu@gmail.com",
     age: 30,

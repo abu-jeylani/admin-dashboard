@@ -1,11 +1,10 @@
-import React, { FC } from "react";
+import { FC } from "react";
 import "./widget.scss";
 import {
   AccountBalanceWalletOutlined,
   KeyboardArrowUp,
   MonetizationOnOutlined,
   Person2Outlined,
-  PersonOutline,
   ShoppingCartCheckoutOutlined,
 } from "@mui/icons-material";
 import { WidgetType, WidgetData } from "../../types/widget";

@@ -7,7 +7,6 @@ import {
   TableRow,
   Paper,
 } from "@mui/material/";
-import { FC } from "react";
 import { Order } from "../../types/order";
 import "./tablelist.scss";
 

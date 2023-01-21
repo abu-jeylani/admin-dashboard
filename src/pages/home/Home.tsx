@@ -5,7 +5,7 @@ import Widget from "../../components/widget/Widget";
 import FeaturedChart from "../../components/featuredchart/FeaturedChart";
 import Chart from "../../components/chart/Chart";
 import TableList from "../../components/table/TableList";
-import { orders } from "../../dummyData/orders";
+import { orders } from "../../data/orders";
 
 const Home = () => {
   return (
@@ -21,7 +21,7 @@ const Home = () => {
         </div>
         <div className="charts">
           <FeaturedChart />
-          <Chart />
+          <Chart aspect={2 / 1} title="Last 6 Months (Revenue)" />
         </div>
         <div className="listContainer">
           <div className="listTitle">Latest Transactions</div>

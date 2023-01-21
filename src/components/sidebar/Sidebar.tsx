@@ -14,25 +14,37 @@ import {
   ExitToAppRounded,
 } from "@mui/icons-material";
 
+import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { DarkModeContext } from "../../context/darkModeContex";
+
 const Sidebar = () => {
+  const { dispatch } = useContext(DarkModeContext);
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">Admin</span>
+        <Link to={`/`} style={{ textDecoration: "none" }}>
+          {" "}
+          <span className="logo">Admin</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
           <li>
-            <Dashboard className="icon" />
-            <span>Dashboard</span>
+            <Link to={`/`} style={{ textDecoration: "none" }}>
+              <Dashboard className="icon" />
+              <span>Dashboard</span>
+            </Link>
           </li>
           <p className="title">LISTS</p>
 
           <li>
-            <GroupRounded className="icon" />
-            <span>Users</span>
+            <Link to={`/users`} style={{ textDecoration: "none" }}>
+              <GroupRounded className="icon" />
+              <span>Users</span>
+            </Link>
           </li>
           <li>
             <Inventory2Outlined className="icon" />
@@ -81,8 +93,14 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        ></div>
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "DARK" })}
+        ></div>
       </div>
     </div>
   );

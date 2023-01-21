@@ -7,40 +7,19 @@ import {
   Tooltip,
   ResponsiveContainer,
 } from "recharts";
+import { data } from "../../data/chart";
 import "./chart.scss";
 
-const data = [
-  {
-    name: "January",
-    total: 1200,
-  },
-  {
-    name: "February",
-    total: 2100,
-  },
-  {
-    name: "March",
-    total: 800,
-  },
-  {
-    name: "April",
-    total: 1600,
-  },
-  {
-    name: "May",
-    total: 900,
-  },
-  {
-    name: "June",
-    total: 1700,
-  },
-];
+interface Iprops {
+  aspect: number;
+  title: string;
+}
 
-const Chart = () => {
+const Chart = ({ aspect, title }: Iprops) => {
   return (
     <div className="chart">
-      <div className="title">Last 6 Months (Revenue)</div>
-      <ResponsiveContainer width="100%" aspect={2 / 1}>
+      <div className="title">{title}</div>
+      <ResponsiveContainer width="100%" aspect={aspect}>
         <AreaChart
           width={730}
           height={250}
